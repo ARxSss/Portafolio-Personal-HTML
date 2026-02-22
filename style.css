@@ -1,0 +1,155 @@
+:root {
+    --tv_neon_green: #d4e157;
+    --tv_neon_pink: #00897b;
+    --tv_panel: rgba(0, 40, 40, 0.85);
+    --bg_overlay: rgba(0, 20, 20, 0.65);
+    --text_light: #f0f0f0;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'VT323', monospace;
+}
+
+body {
+    background-color: #002220;
+    background-image: linear-gradient(var(--bg_overlay), var(--bg_overlay)), url('assets/greenroom.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    color: var(--text_light);
+    line-height: 1.6;
+    overflow-x: hidden;
+    font-size: 20px;
+}
+
+.tv_header {
+    text-align: center;
+    padding: 2.5rem;
+    background: linear-gradient(180deg, rgba(0, 30, 30, 0.9), var(--tv_panel));
+    border-bottom: 3px solid var(--tv_neon_pink);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.tv_header h1 {
+    color: var(--tv_neon_green);
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+    margin-bottom: 1.5rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 2.8rem;
+}
+
+.tv_header ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.tv_header a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.4rem;
+    border-bottom: 2px solid transparent;
+    transition: color 0.3s ease, border-color 0.3s ease;
+}
+
+.tv_header a:hover {
+    color: var(--tv_neon_green);
+    border-bottom: 2px solid var(--tv_neon_green);
+}
+
+main {
+    max-width: 900px;
+    margin: 3rem auto;
+    padding: 0 1.5rem;
+}
+
+.tv_section {
+    margin-bottom: 3rem;
+    background-color: var(--tv_panel);
+    border: 2px solid var(--tv_neon_pink);
+    border-radius: 4px;
+    overflow: hidden;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.5);
+    backdrop-filter: blur(4px);
+}
+
+.tv_section h2 {
+    background-color: var(--tv_neon_pink);
+    color: white;
+    padding: 12px 20px;
+    font-size: 1.6rem;
+    border-bottom: 2px solid var(--tv_neon_green);
+    text-shadow: 1px 1px 2px #000;
+}
+
+.content_box {
+    padding: 25px;
+}
+
+.grid_layout {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.info_card {
+    background-color: rgba(255, 255, 255, 0.05);
+    border: 1px solid var(--tv_neon_green);
+    flex: 1 1 250px;
+    padding: 20px;
+    border-radius: 4px;
+    transition: transform 0.2s, box-shadow 0.2s, background-color 0.2s;
+}
+
+.info_card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(212, 225, 87, 0.2);
+    background-color: rgba(212, 225, 87, 0.1);
+}
+
+.info_card h3 {
+    color: var(--tv_neon_green);
+    margin-bottom: 12px;
+    font-size: 1.4rem;
+}
+
+.tv_footer {
+    text-align: center;
+    padding: 2rem;
+    border-top: 2px solid var(--tv_neon_pink);
+    color: #aaa;
+    margin-top: 3rem;
+    background-color: var(--tv_panel);
+    font-size: 1.2rem;
+    backdrop-filter: blur(4px);
+}
+
+.profile_layout {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.profile_img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    border: 4px solid var(--tv_neon_green);
+    box-shadow: 0 0 15px rgba(212, 225, 87, 0.5);
+    object-fit: cover;
+}
+
+@media (max-width: 768px) {
+    .profile_layout {
+        flex-direction: column;
+        text-align: center;
+    }
+}
