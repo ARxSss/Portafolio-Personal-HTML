@@ -153,3 +153,101 @@ main {
         text-align: center;
     }
 }
+
+.tv_form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.tv_input {
+    background-color: rgba(0, 20, 20, 0.8);
+    border: 2px solid var(--tv_neon_green);
+    color: var(--text_light);
+    padding: 12px;
+    font-family: 'VT323', monospace;
+    font-size: 1.2rem;
+    outline: none;
+    transition: box-shadow 0.3s, border-color 0.3s;
+}
+
+.tv_input:focus {
+    border-color: var(--tv_neon_pink);
+    box-shadow: 0 0 10px rgba(255, 0, 255, 0.5);
+}
+
+.tv_btn {
+    background-color: var(--tv_neon_pink);
+    color: white;
+    border: none;
+    padding: 15px;
+    font-family: 'VT323', monospace;
+    font-size: 1.4rem;
+    cursor: pointer;
+    text-transform: uppercase;
+    transition: background 0.3s, transform 0.1s;
+}
+
+.tv_btn:hover {
+    background-color: var(--tv_neon_green);
+    color: black;
+}
+
+.tv_btn:active {
+    transform: scale(0.98);
+}
+
+.nota_card {
+    background-color: rgba(255, 255, 255, 0.05);
+    border-left: 4px solid var(--tv_neon_green);
+    padding: 15px;
+    margin-bottom: 20px;
+    border-radius: 0 5px 5px 0;
+}
+
+.nota_header {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px dashed #555;
+    padding-bottom: 5px;
+    margin-bottom: 10px;
+    color: var(--tv_neon_green);
+    font-size: 1.2rem;
+}
+
+.nota_fecha {
+    font-size: 1rem;
+    color: #aaa;
+}
+
+.nota_cuerpo p {
+    font-size: 1.3rem;
+}
+
+.nota_acciones {
+    margin-top: 15px;
+    display: flex;
+    gap: 20px;
+}
+
+.btn_editar {
+    color: #4fc3f7;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.btn_eliminar {
+    color: #ff5252;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.btn_editar:hover {
+    color: white;
+    text-shadow: 0 0 5px #4fc3f7;
+}
+
+.btn_eliminar:hover {
+    color: white;
+    text-shadow: 0 0 5px #ff5252;
+}
